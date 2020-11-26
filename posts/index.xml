@@ -2,36 +2,36 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Posts on Elise Bonnail Projects</title>
-    <link>ebnnl.github.io/posts/</link>
+    <link>/posts/</link>
     <description>Recent content in Posts on Elise Bonnail Projects</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 21 Nov 2020 15:09:03 +0100</lastBuildDate><atom:link href="ebnnl.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 21 Nov 2020 15:09:03 +0100</lastBuildDate><atom:link href="/posts/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>The Ultimate Display</title>
-      <link>ebnnl.github.io/posts/ultimate-display/</link>
+      <link>/posts/ultimate-display/</link>
       <pubDate>Sat, 21 Nov 2020 15:09:03 +0100</pubDate>
       
-      <guid>ebnnl.github.io/posts/ultimate-display/</guid>
+      <guid>/posts/ultimate-display/</guid>
       <description>The ultimate display would, of course, be a room within which the computer can control the existence of matter. A chair displayed in such aroom would be good enough to sit in. Handcuffs displayed in such a room would be confining, and a bullet displayed in such a room would be fatal. With appropriate programming such a display could literally be the Wonderland into which Alice walked.&amp;mdash; Ivan E.</description>
     </item>
     
     <item>
       <title>Hyper Reality</title>
-      <link>ebnnl.github.io/posts/hyper-reality/</link>
+      <link>/posts/hyper-reality/</link>
       <pubDate>Sat, 21 Nov 2020 13:43:07 +0100</pubDate>
       
-      <guid>ebnnl.github.io/posts/hyper-reality/</guid>
+      <guid>/posts/hyper-reality/</guid>
       <description>Hyper-Reality is a short film created by Keiichi Matsuda. It presents a dystopian and provocative vision of future, where Mixed Reality is used daily. Because of this, advertising is pervasive. Signs are added everywhere. Reality is modified to appear more attractive, like this supermarket which appears more stocked than in reality. The products appear differently depending on who you are, in order to sell more.
 Possible scenarios We could imagine a lot of other scenarios in which Mixed Reality technology can create problems for the user or can be abused by content creators, authorities, users or other entities.</description>
     </item>
     
     <item>
       <title>My First Post</title>
-      <link>ebnnl.github.io/posts/my-first-post/</link>
+      <link>/posts/my-first-post/</link>
       <pubDate>Fri, 20 Nov 2020 11:14:53 +0100</pubDate>
       
-      <guid>ebnnl.github.io/posts/my-first-post/</guid>
+      <guid>/posts/my-first-post/</guid>
       <description>some text, maybe italic, maybe bold ?</description>
     </item>
     
