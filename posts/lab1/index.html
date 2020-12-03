@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
   <meta name="generator" content="Hugo 0.78.2" />
-  <link rel="canonical" href="/posts/">
+  <link rel="canonical" href="/posts/lab1/">
 
   
 
@@ -38,7 +38,7 @@
 
   
   
-  <title>Posts | Elise Bonnail Projects</title>
+  <title>Lab 2 : Unity Hello World | Elise Bonnail Projects</title>
 </head>
 
   <body>
@@ -176,7 +176,7 @@
       
       
       
-      <a href="/posts/" aria-current="page">
+      <a href="/posts/" >
         <svg class="bookmark-icon" aria-hidden="true" focusable="false" viewBox="0 0 40 50">
           <use xlink:href="#bookmark"></use>
         </svg>
@@ -192,84 +192,53 @@
       <div class="main-and-footer">
         <div>
           
-<main id="main">
-  <h1>Posts</h1>
-  
-  <input
-    id="search"
-    type="text"
-    placeholder="Search by title..."
-    aria-label="Search by title"
-  />
-  
-  <ul class="patterns-list" id="list">
-    
-    <li>
-      <h2>
-        <a href="/posts/lab1/">
-          <svg
-            class="bookmark"
-            aria-hidden="true"
-            viewBox="0 0 40 50"
-            focusable="false"
-          >
-            <use xlink:href="#bookmark"></use>
-          </svg>
-          Lab 2 : Unity Hello World
-        </a>
-      </h2>
-    </li>
-    
-    <li>
-      <h2>
-        <a href="/posts/ultimate-display/">
-          <svg
-            class="bookmark"
-            aria-hidden="true"
-            viewBox="0 0 40 50"
-            focusable="false"
-          >
-            <use xlink:href="#bookmark"></use>
-          </svg>
-          The Ultimate Display
-        </a>
-      </h2>
-    </li>
-    
-    <li>
-      <h2>
-        <a href="/posts/hyper-reality/">
-          <svg
-            class="bookmark"
-            aria-hidden="true"
-            viewBox="0 0 40 50"
-            focusable="false"
-          >
-            <use xlink:href="#bookmark"></use>
-          </svg>
-          Hyper Reality
-        </a>
-      </h2>
-    </li>
-    
-    <li>
-      <h2>
-        <a href="/posts/my-first-post/">
-          <svg
-            class="bookmark"
-            aria-hidden="true"
-            viewBox="0 0 40 50"
-            focusable="false"
-          >
-            <use xlink:href="#bookmark"></use>
-          </svg>
-          My First Post
-        </a>
-      </h2>
-    </li>
-    
-  </ul>
-</main>
+  <main id="main">
+    <h1>Lab 2 : Unity Hello World</h1>
+    <p>The goal of this lab was to create a roll-a-ball game to learn Unity&rsquo;s basics, inspired from
+this tutorial :</p>
+<p><a href="https://learn.unity.com/project/roll-a-ball?uv=2019.4">https://learn.unity.com/project/roll-a-ball?uv=2019.4</a></p>
+<p>We had the possibility to fallow another more advanced tutorial, but although I already have a
+little experience with Unity, I preferres to do the roll-a-ball game to be sure that I
+had the basics. And I was right, because I learnt some important points.</p>
+<p>This is what the resulting game looks like. It is a ball that can roll on a plane (
+delimited by walls), directed by the arrows of the keyboard. Some cubes float and spin
+in the air, like gifts in Mario Kart. When the ball hits on a cube, it disappears and
+a counter is incremented. The player wins when he has caught all the cubes.</p>
+<p><img class="special-img-class" src="/RollABall.PNG" width="300" /></p>
+<p>Here is what I learnt :</p>
+<ul>
+<li>How to create a material to change the color of an object.</li>
+</ul>
+<p>In the project view, right click on the &ldquo;Materials&rdquo; folder previously created, the click
+on Create &gt; Material. This will create a material, and you can change it&rsquo;s properties
+trough the inspector (albedo, smoothness&hellip;). Then, you just have to drag the material on
+your object on the scene to add it to your object, or drag it in the inspector of the object
+(in Mesh Renderer &gt; Materials).</p>
+<ul>
+<li>
+<p>How to use the Input System Package to manage input.</p>
+</li>
+<li>
+<p>How to create a Prefab.</p>
+</li>
+</ul>
+<p>When an object is duplicated multiple times in a scene, like the pick-up cubes in our game,
+it might be useful to create a Prefab so that the changes made on the Prefab are applied
+to all the prefab gameobjects in the scene. To do that, you just have to drag the object of
+your scene in the project window.</p>
+<ul>
+<li>How to use TextMesh Pro.</li>
+</ul>
+<p>To create a UI text : right click on your scene, then UI &gt; Text - TextMeshPro. You can then
+change the text, size and anchor of UI. To change the text in a script, add the namespace TMPro,
+add a reference to the TextMeshProUGUI and change it&rsquo;s text value by changing the attribute &ldquo;text&rdquo;.</p>
+<pre><code class="language-cs">using TMPro;
+public TextMeshProUGUI textMesh;
+[...]
+textMesh.text = &quot;New Text&quot;;
+</code></pre>
+
+  </main>
 
           <footer role="contentinfo">
   <div>
