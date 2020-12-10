@@ -8,14 +8,14 @@
     <language>en-us</language>
     <lastBuildDate>Thu, 03 Dec 2020 07:45:02 +0100</lastBuildDate><atom:link href="/posts/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Lab 2 : Unity Hello World</title>
+      <title>Lab 2 : Unity roll-a-ball</title>
       <link>/posts/lab1/</link>
       <pubDate>Thu, 03 Dec 2020 07:45:02 +0100</pubDate>
       
       <guid>/posts/lab1/</guid>
       <description>The goal of this lab was to create a roll-a-ball game to learn Unity&amp;rsquo;s basics, inspired from this tutorial :
 https://learn.unity.com/project/roll-a-ball?uv=2019.4
-We had the possibility to fallow another more advanced tutorial, but although I already have a little experience with Unity, I preferred to do the roll-a-ball game to be sure that I had the basics. And I was right, because I learnt some important points.
+We had the possibility to follow another more advanced tutorial, but although I already have a little experience with Unity, I preferred to do the roll-a-ball game to be sure that I had the basics. And I was right, because I learnt some important points.
 This is what the resulting game looks like.</description>
     </item>
     
