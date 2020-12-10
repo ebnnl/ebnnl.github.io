@@ -6,11 +6,11 @@
     <description>Recent content on Elise Bonnail Projects</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 09 Dec 2020 08:10:25 +0100</lastBuildDate><atom:link href="/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 09 Dec 2020 08:10:25 +0101</lastBuildDate><atom:link href="/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Lab 3 : VR roll-a-ball</title>
       <link>/posts/lab3/</link>
-      <pubDate>Wed, 09 Dec 2020 08:10:25 +0100</pubDate>
+      <pubDate>Wed, 09 Dec 2020 08:10:25 +0101</pubDate>
       
       <guid>/posts/lab3/</guid>
       <description>The goal of this lab was to adapt our roll-a-ball game to VR. We used the Oculus Quest. Here are the steps to remember to create an Oculus application on Unity :
