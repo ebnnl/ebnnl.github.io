@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
   <meta name="generator" content="Hugo 0.78.2" />
-  <link rel="canonical" href="/posts/">
+  <link rel="canonical" href="/posts/lab3/">
 
   
 
@@ -38,7 +38,7 @@
 
   
   
-  <title>Posts | Elise Bonnail Projects</title>
+  <title>Lab 3 : VR roll-a-ball | Elise Bonnail Projects</title>
 </head>
 
   <body>
@@ -176,7 +176,7 @@
       
       
       
-      <a href="/posts/" aria-current="page">
+      <a href="/posts/" >
         <svg class="bookmark-icon" aria-hidden="true" focusable="false" viewBox="0 0 40 50">
           <use xlink:href="#bookmark"></use>
         </svg>
@@ -192,100 +192,87 @@
       <div class="main-and-footer">
         <div>
           
-<main id="main">
-  <h1>Posts</h1>
-  
-  <input
-    id="search"
-    type="text"
-    placeholder="Search by title..."
-    aria-label="Search by title"
-  />
-  
-  <ul class="patterns-list" id="list">
-    
-    <li>
-      <h2>
-        <a href="/posts/lab3/">
-          <svg
-            class="bookmark"
-            aria-hidden="true"
-            viewBox="0 0 40 50"
-            focusable="false"
-          >
-            <use xlink:href="#bookmark"></use>
-          </svg>
-          Lab 3 : VR roll-a-ball
-        </a>
-      </h2>
-    </li>
-    
-    <li>
-      <h2>
-        <a href="/posts/lab1/">
-          <svg
-            class="bookmark"
-            aria-hidden="true"
-            viewBox="0 0 40 50"
-            focusable="false"
-          >
-            <use xlink:href="#bookmark"></use>
-          </svg>
-          Lab 2 : Unity roll-a-ball
-        </a>
-      </h2>
-    </li>
-    
-    <li>
-      <h2>
-        <a href="/posts/ultimate-display/">
-          <svg
-            class="bookmark"
-            aria-hidden="true"
-            viewBox="0 0 40 50"
-            focusable="false"
-          >
-            <use xlink:href="#bookmark"></use>
-          </svg>
-          The Ultimate Display
-        </a>
-      </h2>
-    </li>
-    
-    <li>
-      <h2>
-        <a href="/posts/hyper-reality/">
-          <svg
-            class="bookmark"
-            aria-hidden="true"
-            viewBox="0 0 40 50"
-            focusable="false"
-          >
-            <use xlink:href="#bookmark"></use>
-          </svg>
-          Hyper Reality
-        </a>
-      </h2>
-    </li>
-    
-    <li>
-      <h2>
-        <a href="/posts/my-first-post/">
-          <svg
-            class="bookmark"
-            aria-hidden="true"
-            viewBox="0 0 40 50"
-            focusable="false"
-          >
-            <use xlink:href="#bookmark"></use>
-          </svg>
-          My First Post
-        </a>
-      </h2>
-    </li>
-    
-  </ul>
-</main>
+  <main id="main">
+    <h1>Lab 3 : VR roll-a-ball</h1>
+    <p>The goal of this lab was to adapt our roll-a-ball game to VR. We used the Oculus Quest.
+Here are the steps to remember to create an Oculus application on Unity :</p>
+<ul>
+<li>
+<p>In Build Settings, switch platform to Android</p>
+</li>
+<li>
+<p>In the Asset Store, download and import Oculus Integration</p>
+</li>
+<li>
+<p>In Edit &gt; Project Settings &gt; Player &gt; Other settings &gt; Graphic API, remove Vulkan</p>
+</li>
+<li>
+<p>In Edit &gt; Project Settings &gt; Player &gt; XR Settings, check &ldquo;Virtual Reality Supported&rdquo;
+and add Oculus to the VR SDKs</p>
+</li>
+<li>
+<p>In the Package Manager Window, install Oculus Desktop</p>
+</li>
+<li>
+<p>In the Scene, replace the Main Camera by the <a href="https://developer.oculus.com/documentation/unity/unity-add-camera-rig/">OVRCameraRig</a>
+(in Oculus prefabs). It provides the transform object to represent the Oculus tracking space.
+In the OVRManager, set the Tracking Origin Type to &ldquo;Floor level&rdquo; so that tracking origin will
+be calculated relative to the user&rsquo;s standing height.</p>
+</li>
+<li>
+<p>Add OVRControllerPrefab  as childs of LeftControllerAnchor and RightControllerAnchor, and specify
+the type of controller you want to use. If you want to use hand tracking, you can also
+add OVRHandPrefab. Choose if you want to use controllers or hand tracking in OVRManager &gt; Hand Tracking Support. You can use
+both, but it will never be used in the same time.</p>
+</li>
+</ul>
+<p>The goal of our game is to be able to grab the roll-a-ball board with the controller, and
+tilt it to move to ball.</p>
+<p><img class="special-img-class" src="/lab3gif1.gif" width="500" /></p>
+<p>We can use the different elements of the previous lab, but we need
+to remove the code using the Input System because we don&rsquo;t have it in this new project.
+The interaction proposed by this lab is the following : if the controller is in the collider
+of the roll-a-ball board and the player pulls the trigger, then the board is selected and
+follows the movements of the controller. When the player releases the trigger, the board is
+deselected and it falls. To do this, we add a collider to the roll-a-ball board (the set formed
+by the walls, the ground, the ball and the pickups). A problem then arises, because certain
+elements of the board (the ball and the pickups) have their own colliders. The lab proposes to
+create different layers so that the colliders of roll-a-ball and colliders of selection
+won&rsquo;t affect each other. In Edit &gt; Project Settings &gt; Physics, a collision matrix allows us
+to choose which layout can affect each other.</p>
+<p><img class="special-img-class" src="/Lab3.bmp" width="300" /></p>
+<p>We then wrote a script that manages the selection. We get the trigger state with <a href="https://developer.oculus.com/documentation/unity/unity-ovrinput/">OVRInput.Get(&hellip;) </a>.
+This function returns a float between 0 and 1 which indicates how much the trigger is pressed.
+When the board is selected, we make it child of HandAnchor, so that it follows the movement of the controller.</p>
+<pre><code class="language-cs">selectedObj.transform.parent = this.transform;
+Rigidbody rb = selectedObj.GetComponent&lt;Rigidbody&gt;();
+rb.isKinematic = true;
+rb.useGravity = false;
+rb.velocity = Vector3.zero;
+rb.angularVelocity = Vector3.zero;
+</code></pre>
+<p>When the trigger is released, we remove the parent and adjust all the physics back.</p>
+<pre><code class="language-cs">selectedObj.transform.parent = null;
+Rigidbody rb = selectedObj.GetComponent&lt;Rigidbody&gt;();
+rb.useGravity = true;
+rb.isKinematic = false;
+rb.velocity = OVRInuput.GetLocalControllerVelocity(controller);
+rb.angularVelocity = OVRInput.GetLocalControllerAngularVelocity(controller);
+</code></pre>
+<p>Instead of writing our own script, we could also have used the OVRGrabber and OVRGrabbable scripts directly.
+Replacing the controllers by the LocalAvatar prefab, adding the OVRGrabber script to the local avatar
+and the OVRGrabbable script to the board achieves the same interaction.</p>
+<p>I also tested an interaction that only uses the physical properties of objects, and hand tracking.
+The idea is to place your hands under the board in order to lift it and tilt it to move the ball, as
+you would with a real board.</p>
+<p><img class="special-img-class" src="/lab3gif2.gif" width="500" /></p>
+<p>For that, I added the OVRHandPrefab to which I added a rigid body and a box collider that I adjusted
+to the hands.
+This interaction is more difficult to master than the previous one, in particular because of the
+lack of haptic feedback of the weight of the board in the hands. But this difficulty
+can be interesting in the case of a roll-a-ball game, to add some challenge.</p>
+
+  </main>
 
           <footer role="contentinfo">
   <div>

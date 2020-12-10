@@ -6,7 +6,20 @@
     <description>Recent content on Elise Bonnail Projects</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 03 Dec 2020 07:45:02 +0100</lastBuildDate><atom:link href="/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 09 Dec 2020 08:10:25 +0100</lastBuildDate><atom:link href="/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Lab 3 : VR roll-a-ball</title>
+      <link>/posts/lab3/</link>
+      <pubDate>Wed, 09 Dec 2020 08:10:25 +0100</pubDate>
+      
+      <guid>/posts/lab3/</guid>
+      <description>The goal of this lab was to adapt our roll-a-ball game to VR. We used the Oculus Quest. Here are the steps to remember to create an Oculus application on Unity :
+  In Build Settings, switch platform to Android
+  In the Asset Store, download and import Oculus Integration
+  In Edit &amp;gt; Project Settings &amp;gt; Player &amp;gt; Other settings &amp;gt; Graphic API, remove Vulkan
+  In Edit &amp;gt; Project Settings &amp;gt; Player &amp;gt; XR Settings, check &amp;ldquo;Virtual Reality Supported&amp;rdquo; and add Oculus to the VR SDKs</description>
+    </item>
+    
     <item>
       <title>Lab 2 : Unity roll-a-ball</title>
       <link>/posts/lab1/</link>
