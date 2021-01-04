@@ -6,7 +6,17 @@
     <description>Recent content in Posts on Elise Bonnail Projects</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 09 Dec 2020 08:10:25 +0101</lastBuildDate><atom:link href="/posts/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 15 Dec 2020 15:11:05 +0100</lastBuildDate><atom:link href="/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Locomotion Techniques</title>
+      <link>/posts/locomotion-techniques/</link>
+      <pubDate>Tue, 15 Dec 2020 15:11:05 +0100</pubDate>
+      
+      <guid>/posts/locomotion-techniques/</guid>
+      <description>To be able to take full advantage of the virtual environment in VR, it is necessary to be able to move around, often with a reduced real space. Many means of locomotion in VR have been proposed, such as teleportation or redirected walking. Here are three ideas of locomotion in VR that I thought of.
+Roll the wheelchair The idea of this locomotion technique is to imitate the use of a wheelchair.</description>
+    </item>
+    
     <item>
       <title>Lab 3 : VR roll-a-ball</title>
       <link>/posts/lab3/</link>

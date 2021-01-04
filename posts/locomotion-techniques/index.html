@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
   <meta name="generator" content="Hugo 0.78.2" />
-  <link rel="canonical" href="/posts/">
+  <link rel="canonical" href="/posts/locomotion-techniques/">
 
   
 
@@ -38,7 +38,7 @@
 
   
   
-  <title>Posts | Elise Bonnail Projects</title>
+  <title>Locomotion Techniques | Elise Bonnail Projects</title>
 </head>
 
   <body>
@@ -176,7 +176,7 @@
       
       
       
-      <a href="/posts/" aria-current="page">
+      <a href="/posts/" >
         <svg class="bookmark-icon" aria-hidden="true" focusable="false" viewBox="0 0 40 50">
           <use xlink:href="#bookmark"></use>
         </svg>
@@ -192,116 +192,90 @@
       <div class="main-and-footer">
         <div>
           
-<main id="main">
-  <h1>Posts</h1>
-  
-  <input
-    id="search"
-    type="text"
-    placeholder="Search by title..."
-    aria-label="Search by title"
-  />
-  
-  <ul class="patterns-list" id="list">
-    
-    <li>
-      <h2>
-        <a href="/posts/locomotion-techniques/">
-          <svg
-            class="bookmark"
-            aria-hidden="true"
-            viewBox="0 0 40 50"
-            focusable="false"
-          >
-            <use xlink:href="#bookmark"></use>
-          </svg>
-          Locomotion Techniques
-        </a>
-      </h2>
-    </li>
-    
-    <li>
-      <h2>
-        <a href="/posts/lab3/">
-          <svg
-            class="bookmark"
-            aria-hidden="true"
-            viewBox="0 0 40 50"
-            focusable="false"
-          >
-            <use xlink:href="#bookmark"></use>
-          </svg>
-          Lab 3 : VR roll-a-ball
-        </a>
-      </h2>
-    </li>
-    
-    <li>
-      <h2>
-        <a href="/posts/lab1/">
-          <svg
-            class="bookmark"
-            aria-hidden="true"
-            viewBox="0 0 40 50"
-            focusable="false"
-          >
-            <use xlink:href="#bookmark"></use>
-          </svg>
-          Lab 2 : Unity roll-a-ball
-        </a>
-      </h2>
-    </li>
-    
-    <li>
-      <h2>
-        <a href="/posts/ultimate-display/">
-          <svg
-            class="bookmark"
-            aria-hidden="true"
-            viewBox="0 0 40 50"
-            focusable="false"
-          >
-            <use xlink:href="#bookmark"></use>
-          </svg>
-          The Ultimate Display
-        </a>
-      </h2>
-    </li>
-    
-    <li>
-      <h2>
-        <a href="/posts/hyper-reality/">
-          <svg
-            class="bookmark"
-            aria-hidden="true"
-            viewBox="0 0 40 50"
-            focusable="false"
-          >
-            <use xlink:href="#bookmark"></use>
-          </svg>
-          Hyper Reality
-        </a>
-      </h2>
-    </li>
-    
-    <li>
-      <h2>
-        <a href="/posts/my-first-post/">
-          <svg
-            class="bookmark"
-            aria-hidden="true"
-            viewBox="0 0 40 50"
-            focusable="false"
-          >
-            <use xlink:href="#bookmark"></use>
-          </svg>
-          My First Post
-        </a>
-      </h2>
-    </li>
-    
-  </ul>
-</main>
+  <main id="main">
+    <h1>Locomotion Techniques</h1>
+    <p>To be able to take full advantage of the virtual environment in VR,
+it is necessary to be able to move around, often with a reduced real space.
+Many means of locomotion in VR have been proposed, such as teleportation or
+redirected walking. Here are three ideas of locomotion in VR that I thought of.</p>
+<h2 id="roll-the-wheelchair">Roll the wheelchair</h2>
+<p>The idea of this locomotion technique is to imitate the use of a wheelchair. To use it,
+the user just needs to be seated on a chair. In the virtual environment, he sees that
+he is sitting in a wheelchair, with a wheel on each side. To move forward, the user
+must (virtually) grab the wheels and push them forward (and backward to move backward), as he would
+with a real wheelchair. The speed with which he makes the wheels rolling determines
+the speed at which it moves. To turn to the right, the user must turn the right
+wheel only, and vice versa.</p>
+<p><img class="special-img-class" src="/Wheelchair.png" width="400" /></p>
+<p>The goal of this locomotion technique could be to put people in the shoes of physically
+disabled people, in order to raise awareness about that, through a game.</p>
+<p>This locomotion technique would achieve its goal if the user can quickly and intuitively
+understand how to move and how to turn, and if he feels like he has been in a real wheelchair.</p>
+<p>To implement it, we could create two objects corresponding to the wheels, and the user could
+spin those wheels by grabbing them (doing a hand tracking pinch on the wheel) and give
+them speed. This speed determines the speed of the camera movement.</p>
+<h2 id="push-the-ski-poles">Push the ski poles</h2>
+<p>The principle of this locomotion technique is to imitate the use of ski poles.
+The user has two controllers in his hands, which he sees as ski poles.
+He can also see skis at his feet. To move forward, if he is on a flat ground,
+he must put his poles on the ground, then push on them to gain momentum.
+If the terrain is sloping, the skier advances without needing to push on the poles.
+He can slow down by putting both poles on the ground.
+Once moving forward, the user must put his right pole on the ground to turn to the
+right, and vice versa.</p>
+<p><img class="special-img-class" src="/Ski.png" width="400" /></p>
+<p>The goal of this locomotion technique is to use it in a game where the player is a skier.
+This locomotion technique is more suitable for terrain where there are slopes, such as
+a ski slope, because otherwise it could be tiring to constantly push on the poles.
+To have haptic feedback when the pole hits the ground, we could make the controllers vibrate
+(as when the saber from Beat Saber hits an object).</p>
+<h2 id="control-the-puppet">Control the puppet</h2>
+<p>For this locomotion technique, I was inspired by this video by Daniel Beauchamp
+(you should check his tweeter account, he always has great crazy ideas):
+<a href="https://twitter.com/i/status/1227302127862734849">https://twitter.com/i/status/1227302127862734849</a></p>
+<p>In this technique, a movement of the fingers that mimics the one of the legs allows
+to move forward. I would like to dig this metaphor even more, by really associating the index and
+middle fingers with the legs of a puppet.</p>
+<p><img class="special-img-class" src="/Puppet1.png" width="400" /></p>
+<p>In the sketch above, I represented the hand, but that&rsquo;s just to visualize the metaphor.
+The user will only see the puppet, and not the hand. The puppet is not attached to the position
+and orientation of the user&rsquo;s hand (when the user translates or rotates his hand, the puppet
+doesn&rsquo;t move). Only the distance between the legs of the puppet depends on the distance
+between the user&rsquo;s fingers.
+The user must move their fingers to move the puppet forward.</p>
+<p>Not only is the user the puppeteer, but he is also the puppet. Thus, the user will always
+have two views of the world. The one of the puppeteer, and the one of the puppet.
+In the sketch below, the view of the puppet is predominant. The user is in the shoes of
+the puppet, and sees the world around at real size. The user can see at the top right,
+in small size, the view of the puppeteer (like a map with the puppet on it).
+By moving the fingers, the user moves the puppet forward, and therefore on the view of the
+puppet, he will move forward in the environment. In the view of the puppeteer, he sees
+the puppet walking and moving on the map. The orientation of the hand of the user determines
+the direction of the movement.</p>
+<p><img class="special-img-class" src="/Puppet2.png" width="400" /></p>
+<p>The user can choose the main view he wants to have. In the sketch below, the view of the
+puppeteer is predominant. He can still see the view of the puppet on a smaller scale, at
+the top right. If the user is sensitive to motion sickness, he can choose the puppeteer
+view when the puppet has to move a lot, then switch back to the puppet view to observe the environment.</p>
+<p><img class="special-img-class" src="/Puppet3.png" width="400" /></p>
+<p>The goal of this locomotion technique is to have something fun to use (who has never drawn
+a puppet on his fingers as a child ?), and to allow to have an outside view of the world
+in case of motion sickness.</p>
+<p>I will have achieved my goal if the user has the feeling that the movement of the puppet depends
+directly on what he is doing with his fingers, and if he is able to switch between the two views
+(puppet and puppeteer) without having the feeling of being lost in space.</p>
+<p>To implement this technique, I will use the hand tracking of the Oculus. The relative position
+of the puppet&rsquo;s legs will be tied to the relative position of the bones of the index and middle
+fingers of the hand. I may need to use inverse kinematics to determine the puppet posture.
+Then, a detection of movement of the fingers (when the index or middle finger goes forward
+to back for example) will trigger the movement of the puppet of a certain distance.
+Two cameras will be present in the scene, one attached to the user&rsquo;s head and which moves forward
+like the puppet, and one above the scene. This will allow to have both views.
+First, I will try to implement Daniel Beauchamp&rsquo;s idea (move the camera forward when the user makes a
+certain movement with his fingers). Then, if I was able do that, I&rsquo;ll add the puppet idea
+and the two different views.</p>
+
+  </main>
 
           <footer role="contentinfo">
   <div>
