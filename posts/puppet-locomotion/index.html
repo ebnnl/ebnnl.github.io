@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
   <meta name="generator" content="Hugo 0.78.2" />
-  <link rel="canonical" href="/posts/">
+  <link rel="canonical" href="/posts/puppet-locomotion/">
 
   
 
@@ -38,7 +38,7 @@
 
   
   
-  <title>Posts | Elise Bonnail Projects</title>
+  <title>Puppet Project | Elise Bonnail Projects</title>
 </head>
 
   <body>
@@ -176,7 +176,7 @@
       
       
       
-      <a href="/posts/" aria-current="page">
+      <a href="/posts/" >
         <svg class="bookmark-icon" aria-hidden="true" focusable="false" viewBox="0 0 40 50">
           <use xlink:href="#bookmark"></use>
         </svg>
@@ -192,132 +192,148 @@
       <div class="main-and-footer">
         <div>
           
-<main id="main">
-  <h1>Posts</h1>
-  
-  <input
-    id="search"
-    type="text"
-    placeholder="Search by title..."
-    aria-label="Search by title"
-  />
-  
-  <ul class="patterns-list" id="list">
-    
-    <li>
-      <h2>
-        <a href="/posts/puppet-locomotion/">
-          <svg
-            class="bookmark"
-            aria-hidden="true"
-            viewBox="0 0 40 50"
-            focusable="false"
-          >
-            <use xlink:href="#bookmark"></use>
-          </svg>
-          Puppet Project
-        </a>
-      </h2>
-    </li>
-    
-    <li>
-      <h2>
-        <a href="/posts/locomotion-techniques/">
-          <svg
-            class="bookmark"
-            aria-hidden="true"
-            viewBox="0 0 40 50"
-            focusable="false"
-          >
-            <use xlink:href="#bookmark"></use>
-          </svg>
-          Locomotion Techniques
-        </a>
-      </h2>
-    </li>
-    
-    <li>
-      <h2>
-        <a href="/posts/lab3/">
-          <svg
-            class="bookmark"
-            aria-hidden="true"
-            viewBox="0 0 40 50"
-            focusable="false"
-          >
-            <use xlink:href="#bookmark"></use>
-          </svg>
-          Lab 3 : VR roll-a-ball
-        </a>
-      </h2>
-    </li>
-    
-    <li>
-      <h2>
-        <a href="/posts/lab1/">
-          <svg
-            class="bookmark"
-            aria-hidden="true"
-            viewBox="0 0 40 50"
-            focusable="false"
-          >
-            <use xlink:href="#bookmark"></use>
-          </svg>
-          Lab 2 : Unity roll-a-ball
-        </a>
-      </h2>
-    </li>
-    
-    <li>
-      <h2>
-        <a href="/posts/ultimate-display/">
-          <svg
-            class="bookmark"
-            aria-hidden="true"
-            viewBox="0 0 40 50"
-            focusable="false"
-          >
-            <use xlink:href="#bookmark"></use>
-          </svg>
-          The Ultimate Display
-        </a>
-      </h2>
-    </li>
-    
-    <li>
-      <h2>
-        <a href="/posts/hyper-reality/">
-          <svg
-            class="bookmark"
-            aria-hidden="true"
-            viewBox="0 0 40 50"
-            focusable="false"
-          >
-            <use xlink:href="#bookmark"></use>
-          </svg>
-          Hyper Reality
-        </a>
-      </h2>
-    </li>
-    
-    <li>
-      <h2>
-        <a href="/posts/my-first-post/">
-          <svg
-            class="bookmark"
-            aria-hidden="true"
-            viewBox="0 0 40 50"
-            focusable="false"
-          >
-            <use xlink:href="#bookmark"></use>
-          </svg>
-          My First Post
-        </a>
-      </h2>
-    </li>
-    
-  </ul>
-</main>
+  <main id="main">
+    <h1>Puppet Project</h1>
+    <p>This project consisted of designing, implementing and evaluating a locomotion technique. You
+can find  the starting idea and the motivations of this locomotion technique in <a href="https://ebnnl.github.io/posts/locomotion-techniques/#control-the-puppet"><em>the previous post</em></a>.
+You can find <a href="https://github.com/ebnnl/Puppet_VRParkour"><em>here</em></a> the code and the apk.</p>
+<p>My idea is to use the metaphor of the puppet. The user can control a puppet with his fingers,
+and make it evolve in its environment. Not only is the user the puppeteer, he is also the puppet.
+He can therefore navigate between two different views, the one of the puppet he embodies, and
+the one of the puppeteer, outside the scene. The purpose of this outside view is to have a way
+to escape motion sickness if necessary.</p>
+<p><img class="special-img-class" src="/Gif_Vues2.gif" width="700" /></p>
+<p>Here is a summary of how this locomotion technique works :</p>
+<ul>
+<li><strong>Move forward :</strong> step movement with the right hand (index and middle finger)</li>
+<li><strong>Jump :</strong> jumping movement with the right hand (index and middle finger)</li>
+<li><strong>Turn :</strong> In puppeteer mode, turn your right hand. In puppeteer mode, turn your head.</li>
+<li><strong>Increase/Decrease the size of the puppet :</strong> Pinch right index/middle finger</li>
+<li><strong>Change point of view :</strong> pinch left index finger</li>
+<li><strong>Center point of view :</strong> pinch left middle finger</li>
+</ul>
+<p><img class="special-img-class" src="/controls.PNG" width="700" /></p>
+<h3 id="implementation">Implementation</h3>
+<h4 id="step-1--associate-finger-movement-to-the-movement-of-the-puppet">Step 1 : Associate finger movement to the movement of the puppet</h4>
+<p>The first step to build this puppet is to associate the movement of the user&rsquo;s fingers
+with the movement of the puppet&rsquo;s legs.
+The left thigh of the puppet corresponds to the first bone of the index finger, and the
+left tibia to the second bone of the index finger. The right thigh corresponds to the
+first bone of the middle finger of the hand, and the right tibia to the second bone of the middle finger.</p>
+<p><img class="special-img-class" src="/Bones.png" width="400" /></p>
+<p>We can get each necessary bone :</p>
+<p><img class="special-img-class" src="/Step1-1.PNG" width="400" />
+<img class="special-img-class" src="/Step1-2.PNG" width="800" /></p>
+<p>The fingers having the same degrees of freedom as the legs (if we don&rsquo;t take into account the third bone
+of the fingers), we just have to assign the rotations of the hand&rsquo;s bones to the thigh&rsquo;s and shin&rsquo;s rotation
+of the puppet.
+<img class="special-img-class" src="/Step1-3.PNG" width="900" />
+leftLeg1_initRot is the initial rotation of the left thigh. We rotate is the same way as
+the first bone of the index, with a few ajustments so that the rotation of the leg is realistic.
+The same is done with the arms, symmetrically. We obtain the following result, intuitive to handle :</p>
+<p><img class="special-img-class" src="/Gif_Mvt.gif" width="600" /></p>
+<h4 id="step-2--rotate-the-puppet">Step 2 : Rotate the puppet</h4>
+<p>We must now be able to orient the puppet with the hand. We would like to be able to have any orientation possible,
+so we must be able to rotate the puppet 360°. However, we can&rsquo;t turn our hand 360°, so we have to amplify this movement.
+We calculate the new rotation of the puppet as a function of the rotation of the hand, so that is can turn 360°.</p>
+<p><img class="special-img-class" src="/Step2-1.PNG" width="900" /></p>
+<p>3.5 and 1.05 are values I found from the minimum and maximum hand rotation. These values may need to be ajusted.
+This rotation is only performed if the hand has rotated significantly enough (here I put a 0.001
+threshold on the rotation of the hand) to avoid inducing unwanted rotations, due to a slight hand
+shaking for example. We obtain the following result :</p>
+<p><img class="special-img-class" src="/Gif_Rotation.gif" width="600" /></p>
+<h4 id="step-3--move-the-puppet-forward">Step 3 : Move the puppet forward</h4>
+<p>The next step is to move the puppet forward when the user makes a walking movement.
+The idea is simple : each time one of the two fingers makes a movement from front to back,
+we consider that it&rsquo;s a movement corresponding to a step, and we then move the puppet
+by a certain step.</p>
+<p><img class="special-img-class" src="/Walking.png" width="400" /></p>
+<p><img class="special-img-class" src="/Step3-1.PNG" width="900" /></p>
+<p>A threshold is added on the detection of this movement (here, a rotation difference of
+at least 0.005 is needed), to avoid a slight shaking of a finger being considered as
+a step movement.
+Without realizing it, when we move our fingers, we also slightly turn our hand. It is
+therefore necessary that the rotation of the puppet is only taken into account when there is
+no walking movement detected. Otherwise, there are too many involuntary rotations of the puppet.
+The &ldquo;step&rdquo; value is determined empirically. It must be large enough to feel like the puppet is pushing
+on its foot to move forward, but not too large so we don&rsquo;t have the feeling that the puppet slips
+on the floor.
+If the user makes a slow movement, the puppet will move slowly, and vice versa, which is quite
+intuitive to control the speed of the puppet :</p>
+<p><img class="special-img-class" src="/Gif_Pas.gif" width="600" /></p>
+<h4 id="step-4--jump">Step 4 : Jump</h4>
+<p>In the same way, we can also add a jumping movement when the two fingers make a movement
+from front to back simultaneously.
+The puppet then falls down thanks to gravity.</p>
+<p><img class="special-img-class" src="/Step4-1.PNG" width="900" /></p>
+<p><img class="special-img-class" src="/Gif_Saut.gif" width="600" /></p>
+<h4 id="step-5--enlarge-the-puppet">Step 5 : Enlarge the puppet</h4>
+<p>One way to control the speed of the puppet is to change its size. The idea is that a giant takes
+bigger steps, and moves faster than a small puppet.
+The user can modify the size of the puppet by making a pinch gesture.</p>
+<p><img class="special-img-class" src="/Step5-1.PNG" width="500" /></p>
+<p>I added a limit so that the user doesn&rsquo;t cheat by choosing a puppet as large as the world for example,
+and to try to keep it realistic.
+The size of the step and the jump depend on the chosen size.</p>
+<p><img class="special-img-class" src="/Step5-2.PNG" width="400" /></p>
+<p><img class="special-img-class" src="/Gif_Rescale.gif" width="600" /></p>
+<h4 id="step-6--change-point-of-view">Step 6 : Change point of view</h4>
+<p>For now, we have worked with an external viewpoint (the puppeteer&rsquo;s point of view), but we would
+like to be able to change with the point of view of the puppet. To do so, I attached two
+empty Game Objects to the puppet : PuppetViewPoint which is located at the puppet&rsquo;s eye level,
+and PuppeteerViewPoint which is located far from the puppet.
+When the user does a pinch with the left index finger, the point of view changes. We therefore
+place the main camera in the corresponding GameObject, PuppetViewPoint of PuppeteerViewPoint.
+A second view, seen by secondCamera, allows the user to see the puppet view if you are in puppeteer
+mode and vice versa. The view from this camera is rendered in a Render Texture, displayed in the canvas.</p>
+<p><img class="special-img-class" src="/Step6-1.PNG" width="400" /></p>
+<p>When the user is in puppeteer mode, the view is fixed (the camera doesn&rsquo;t follow the puppet). A pinch
+with the left middle finger allows the user to refocus the view on the puppet. Maintaining this pinch
+allows to have a constant focus on the puppet (the camera follows the puppet), so it&rsquo;s easier to
+control the rotations, but it might induce motion sickness, what this external view wants to avoid.</p>
+<p><img class="special-img-class" src="/Step6-2.PNG" width="500" /></p>
+<p>When the user is in puppet mode, the rotation of the puppet is not done with the hand. Indeed, since
+our head is supposed to be the head of the puppet, it&rsquo;s more logical and intuitive to turn the puppet
+when you turn your head. It&rsquo;s much more intuitive, but the problem is that it forces the user to
+be standing in order to be able to do 360° rotations. I didn&rsquo;t dig this issue, but we could for example
+amplify the movement of the head, so that a real movement of 90° corresponds to a virtual 180° movement. I imagine
+this would induce motion sickness.</p>
+<p>Here is the result showing each point of view :</p>
+<p><img class="special-img-class" src="/Gif_Vues.gif" width="600" /></p>
+<h3 id="evaluation">Evaluation</h3>
+<p>To evaluate our locomotion technique, we conducted a small user study, with 3 measurements: ours, and that of two other users.
+We all had the same parkour to test our locomotion technique.  The rounds are timed, and the user must collect coins on the way.
+As we all did a different locomotion technique, we can compare our results.
+The variables we measure are:</p>
+<ul>
+<li>The average time per round</li>
+<li>The average accuracy per round (average of picked up coins)</li>
+<li>The average amount of finished rounds</li>
+<li>Simulator Sickness using the following single item question : &ldquo;On a scale from 1 to 10, how
+much motion sickness do you perceive right now ?&rdquo;</li>
+<li>Presence using the following single item question : &ldquo;On a scale from 1 to 10, how present did
+you feel in the virtual world ?&rdquo;</li>
+<li>Enjoyment using : &ldquo;On a sclae from 1 to 10, how much fun did you have during the task ?&rdquo;</li>
+</ul>
+<p>The evaluation procedure is the following:</p>
+<ul>
+<li>First, welcom the participant and explain him the technique of locomotion</li>
+<li>Let the user 2 minutes to practice</li>
+<li>Expose the user to the parkour during 10 minutes, with the instruction to be as fast and accurate as possible. If we exposed the user for less than 10 minutes, we would not be able to measure simulator sickness, as it takes some exposure time to feel the effects.</li>
+<li>Give the user a questionnaire</li>
+<li>Ask him for open comments.</li>
+</ul>
+<p>Here are the results :
+<img class="special-img-class" src="/results.PNG" width="600" /></p>
+<p>This locomotion technique is more efficient than the others to have good accuracy, but is much slower.</p>
+<p>The conclusion I make from the evaluation is that the 3rd person point of view is quite efficient to avoid motion sickness, but in this view it is more difficult to control the direction of the puppet. It’s easier to orient the puppet with the head than with the hand.
+Personally I used principally the external person point of view because it&rsquo;s easier for me to use it as I had a lot of exposure to it. But for example, the first participant couldn’t control it and used principally the 1st person point of view.
+The second thing is that I thought that the walking gesture was easy to do, but some people struggle to do it and it’s not natural for them, I didn’t really think to that at first. The second participant was able to do the movement, but his fingers were tired after a few minutes.
+The first goal was to have something fun to use, and I think it is. It’s quite challenging too.
+The second goal was to have a way to escape motion sickness with the 3rd person point of view, but only trained people manage to use it.
+This technique is more suitable for small movements which do not require speed.</p>
+
+  </main>
 
           <footer role="contentinfo">
   <div>
