@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
   <meta name="generator" content="Hugo 0.78.2" />
-  <link rel="canonical" href="/posts/lab1/">
+  <link rel="canonical" href="/posts/unitysetup/">
 
   
 
@@ -38,7 +38,7 @@
 
   
   
-  <title>Unity roll-a-ball | Elise Bonnail Projects</title>
+  <title>Unity Setup | Elise Bonnail Projects</title>
 </head>
 
   <body>
@@ -193,50 +193,22 @@
         <div>
           
   <main id="main">
-    <h1>Unity roll-a-ball</h1>
-    <p>The goal of this lab was to create a roll-a-ball game to learn Unity&rsquo;s basics, inspired from
-this tutorial :</p>
-<p><a href="https://learn.unity.com/project/roll-a-ball?uv=2019.4">https://learn.unity.com/project/roll-a-ball?uv=2019.4</a></p>
-<p>We had the possibility to follow another more advanced tutorial, but although I already have a
-little experience with Unity, I preferred to do the roll-a-ball game to be sure that I
-had the basics. And I was right, because I learnt some important points.</p>
-<p>This is what the resulting game looks like. It is a ball that can roll on a plane (
-delimited by walls), directed by the arrows of the keyboard. Some cubes float and spin
-in the air, like gifts in Mario Kart. When the ball hits on a cube, it disappears and
-a counter is incremented. The player wins when he has caught all the cubes.</p>
-<p><img class="special-img-class" src="/RollABall.PNG" width="400" /></p>
-<p>Here is what I learnt :</p>
-<ul>
-<li>How to create a material to change the color of an object.</li>
-</ul>
-<p>In the project view, right click on the &ldquo;Materials&rdquo; folder previously created, then click
-on Create &gt; Material. This will create a material, and you can change it&rsquo;s properties
-trough the inspector (albedo, smoothness&hellip;). Then, you just have to drag the material on
-your object on the scene to add it to your object, or drag it in the inspector of the object
-(in Mesh Renderer &gt; Materials).</p>
-<ul>
+    <h1>Unity Setup</h1>
+    <p>Here is how to setup Unity environment.</p>
+<ol>
 <li>
-<p>How to use the Input System Package to manage input.</p>
+<p>Download and install Unity Hub following those intructions :
+<a href="https://docs.unity3d.com/Manual/GettingStartedInstallingHub.html">https://docs.unity3d.com/Manual/GettingStartedInstallingHub.html</a></p>
 </li>
 <li>
-<p>How to create a Prefab.</p>
+<p>Open Unity Hub. In the tab &ldquo;Installs&rdquo;, click &ldquo;Add&rdquo; to install the Unity version you need.
+If you need to develop for Oculus Quest, make sure &ldquo;Android Build Support&rdquo; is checked.</p>
 </li>
-</ul>
-<p>When an object is duplicated multiple times in a scene, like the pick-up cubes in our game,
-it might be useful to create a Prefab so that the changes made on the Prefab are applied
-to all the prefab gameobjects in the scene. To do that, you just have to drag the object of
-your scene in the project window.</p>
-<ul>
-<li>How to use TextMesh Pro.</li>
-</ul>
-<p>To create a UI text : right click on your scene, then UI &gt; Text - TextMeshPro. You can then
-change the text, size and anchor of UI. To change the text in a script, add the namespace TMPro,
-add a reference to the TextMeshProUGUI and change it&rsquo;s text value by changing the attribute &ldquo;text&rdquo;.</p>
-<pre><code class="language-cs">using TMPro;
-public TextMeshProUGUI textMesh;
-[...]
-textMesh.text = &quot;New Text&quot;;
-</code></pre>
+<li>
+<p>To create a project, you can then click &ldquo;New&rdquo; in the &ldquo;Projects&rdquo; tab. Click the arrow
+next to &ldquo;New&rdquo; to create a project with a specific Unity version.</p>
+</li>
+</ol>
 
   </main>
 

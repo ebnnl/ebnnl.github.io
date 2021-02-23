@@ -8,12 +8,12 @@
     <language>en-us</language>
     <lastBuildDate>Mon, 04 Jan 2021 11:18:03 +0100</lastBuildDate><atom:link href="/posts/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Puppet Project</title>
+      <title>Puppet Locomotion</title>
       <link>/posts/puppet-locomotion/</link>
       <pubDate>Mon, 04 Jan 2021 11:18:03 +0100</pubDate>
       
       <guid>/posts/puppet-locomotion/</guid>
-      <description>This project consisted of designing, implementing and evaluating a locomotion technique. You can find the starting idea and the motivations of this locomotion technique in the previous post. You can find here the code and the apk.
+      <description>This project consisted in designing, implementing and evaluating a locomotion technique. You can find the starting idea and the motivations of this locomotion technique in the previous post. You can find here the code and the apk.
 My idea is to use the metaphor of the puppet. The user can control a puppet with his fingers, and make it evolve in its environment. Not only is the user the puppeteer, he is also the puppet.</description>
     </item>
     
@@ -28,7 +28,7 @@ Roll the wheelchair The idea of this locomotion technique is to imitate the use 
     </item>
     
     <item>
-      <title>Lab 3 : VR roll-a-ball</title>
+      <title>VR roll-a-ball</title>
       <link>/posts/lab3/</link>
       <pubDate>Wed, 09 Dec 2020 08:10:25 +0101</pubDate>
       
@@ -41,7 +41,7 @@ Roll the wheelchair The idea of this locomotion technique is to imitate the use 
     </item>
     
     <item>
-      <title>Lab 2 : Unity roll-a-ball</title>
+      <title>Unity roll-a-ball</title>
       <link>/posts/lab1/</link>
       <pubDate>Thu, 03 Dec 2020 07:45:02 +0100</pubDate>
       
@@ -72,12 +72,29 @@ Possible scenarios We could imagine a lot of other scenarios in which Mixed Real
     </item>
     
     <item>
-      <title>My First Post</title>
-      <link>/posts/my-first-post/</link>
-      <pubDate>Fri, 20 Nov 2020 11:14:53 +0100</pubDate>
+      <title>Unity Setup</title>
+      <link>/posts/unitysetup/</link>
+      <pubDate>Sun, 23 Feb 2020 09:12:17 +0100</pubDate>
       
-      <guid>/posts/my-first-post/</guid>
-      <description>some text, maybe italic, maybe bold ?</description>
+      <guid>/posts/unitysetup/</guid>
+      <description>Here is how to setup Unity environment.
+  Download and install Unity Hub following those intructions : https://docs.unity3d.com/Manual/GettingStartedInstallingHub.html
+  Open Unity Hub. In the tab &amp;ldquo;Installs&amp;rdquo;, click &amp;ldquo;Add&amp;rdquo; to install the Unity version you need. If you need to develop for Oculus Quest, make sure &amp;ldquo;Android Build Support&amp;rdquo; is checked.
+  To create a project, you can then click &amp;ldquo;New&amp;rdquo; in the &amp;ldquo;Projects&amp;rdquo; tab. Click the arrow next to &amp;ldquo;New&amp;rdquo; to create a project with a specific Unity version.</description>
+    </item>
+    
+    <item>
+      <title>Blog Setup</title>
+      <link>/posts/blogsetup/</link>
+      <pubDate>Thu, 23 Jan 2020 09:10:40 +0100</pubDate>
+      
+      <guid>/posts/blogsetup/</guid>
+      <description>To create this blog I used Hugo, an open source framework to generate static websites. The first step is to install Hugo, following these instructions :
+https://gohugo.io/getting-started/installing/
+Then, to create a page, you just need to use this command :
+hugo new site [sitename]
+Theme Hugo allows you to make beautiful websites easily, thanks to themes organized in git repositories. You can find them here : https://themes.gohugo.io/
+Those GitHub repositories usually contain an exampleSite to have a look at the theme, and to see how it is organized.</description>
     </item>
     
   </channel>

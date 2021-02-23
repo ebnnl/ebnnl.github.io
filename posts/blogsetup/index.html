@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
   <meta name="generator" content="Hugo 0.78.2" />
-  <link rel="canonical" href="/posts/lab1/">
+  <link rel="canonical" href="/posts/blogsetup/">
 
   
 
@@ -38,7 +38,7 @@
 
   
   
-  <title>Unity roll-a-ball | Elise Bonnail Projects</title>
+  <title>Blog Setup | Elise Bonnail Projects</title>
 </head>
 
   <body>
@@ -193,50 +193,50 @@
         <div>
           
   <main id="main">
-    <h1>Unity roll-a-ball</h1>
-    <p>The goal of this lab was to create a roll-a-ball game to learn Unity&rsquo;s basics, inspired from
-this tutorial :</p>
-<p><a href="https://learn.unity.com/project/roll-a-ball?uv=2019.4">https://learn.unity.com/project/roll-a-ball?uv=2019.4</a></p>
-<p>We had the possibility to follow another more advanced tutorial, but although I already have a
-little experience with Unity, I preferred to do the roll-a-ball game to be sure that I
-had the basics. And I was right, because I learnt some important points.</p>
-<p>This is what the resulting game looks like. It is a ball that can roll on a plane (
-delimited by walls), directed by the arrows of the keyboard. Some cubes float and spin
-in the air, like gifts in Mario Kart. When the ball hits on a cube, it disappears and
-a counter is incremented. The player wins when he has caught all the cubes.</p>
-<p><img class="special-img-class" src="/RollABall.PNG" width="400" /></p>
-<p>Here is what I learnt :</p>
-<ul>
-<li>How to create a material to change the color of an object.</li>
-</ul>
-<p>In the project view, right click on the &ldquo;Materials&rdquo; folder previously created, then click
-on Create &gt; Material. This will create a material, and you can change it&rsquo;s properties
-trough the inspector (albedo, smoothness&hellip;). Then, you just have to drag the material on
-your object on the scene to add it to your object, or drag it in the inspector of the object
-(in Mesh Renderer &gt; Materials).</p>
-<ul>
-<li>
-<p>How to use the Input System Package to manage input.</p>
-</li>
-<li>
-<p>How to create a Prefab.</p>
-</li>
-</ul>
-<p>When an object is duplicated multiple times in a scene, like the pick-up cubes in our game,
-it might be useful to create a Prefab so that the changes made on the Prefab are applied
-to all the prefab gameobjects in the scene. To do that, you just have to drag the object of
-your scene in the project window.</p>
-<ul>
-<li>How to use TextMesh Pro.</li>
-</ul>
-<p>To create a UI text : right click on your scene, then UI &gt; Text - TextMeshPro. You can then
-change the text, size and anchor of UI. To change the text in a script, add the namespace TMPro,
-add a reference to the TextMeshProUGUI and change it&rsquo;s text value by changing the attribute &ldquo;text&rdquo;.</p>
-<pre><code class="language-cs">using TMPro;
-public TextMeshProUGUI textMesh;
-[...]
-textMesh.text = &quot;New Text&quot;;
+    <h1>Blog Setup</h1>
+    <p>To create this blog I used Hugo, an open source framework to generate static websites.
+The first step is to install Hugo, following these instructions :</p>
+<p><a href="https://gohugo.io/getting-started/installing/">https://gohugo.io/getting-started/installing/</a></p>
+<p>Then, to create a page, you just need to use this command :</p>
+<p><code>hugo new site [sitename]</code></p>
+<h3 id="theme">Theme</h3>
+<p>Hugo allows you to make beautiful websites easily, thanks to themes organized
+in git repositories. You can find them
+here :  <a href="https://themes.gohugo.io/">https://themes.gohugo.io/</a></p>
+<p>Those GitHub repositories usually contain an exampleSite to have a look at the theme,
+and to see how it is organized. A readme explains how to install it.</p>
+<p>Personnally, I used the Cupper theme :</p>
+<p><a href="https://github.com/zwbetz-gh/cupper-hugo-theme">https://github.com/zwbetz-gh/cupper-hugo-theme</a></p>
+<p>To use it, I just had to initialize a git repository, add a .gitignore for Hugo (<a href="https://www.toptal.com/developers/gitignore">https://www.toptal.com/developers/gitignore</a>)
+and use this command from the root of the site :</p>
+<p><code>git submodule add https://github.com/zwbetz-gh/cupper-hugo-theme.git themes/cupper-hugo-theme</code></p>
+<h3 id="content">Content</h3>
+<p>To create a new page, execute :</p>
+<p><code>hugo new posts/[postName.md]</code></p>
+<p>You can then fill this file to add content to your page.
+In the header, <code>draft: true</code> means that the page won&rsquo;t be published on the website.</p>
+<p>The pages are using markdown language. You can find some examples of syntax here :</p>
+<p><a href="https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet">https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet</a></p>
+<p>You can test your site locally with this command (<code>-D</code> includes drafts):</p>
+<p><code>hugo server -D </code></p>
+<h3 id="deployment">Deployment</h3>
+<p>To build the site, use the command <code>hugo</code> at the root of the project. The result is then in the
+<code>public</code> folder.</p>
+<p>I used GitHub to get the page online. This is how I did it :</p>
+<ol>
+<li>Create a new GitHub Repository. To publish the website with the link &ldquo;yourusername.github.io&rdquo;,
+name the repository &ldquo;[username].github.io&rdquo;.</li>
+<li>Create a local git repository in the folder &ldquo;public&rdquo;, link it to the GitHub repository.</li>
+</ol>
+<pre><code class="language-cd">git init
+git add .
+git remote add origin https://github.com/username/username.github.io.git
+git commit -m “first commit”
+git push origin master
 </code></pre>
+<ol start="3">
+<li>You can then check if the site is published in your GitHub repository &gt; Settings &gt; Github Pages.</li>
+</ol>
 
   </main>
 
