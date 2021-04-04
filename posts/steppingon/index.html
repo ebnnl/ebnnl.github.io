@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
   <meta name="generator" content="Hugo 0.78.2" />
-  <link rel="canonical" href="/posts/">
+  <link rel="canonical" href="/posts/steppingon/">
 
   
 
@@ -38,7 +38,7 @@
 
   
   
-  <title>Posts | Elise Bonnail Projects</title>
+  <title>SteppingOn | Elise Bonnail Projects</title>
 </head>
 
   <body>
@@ -176,7 +176,7 @@
       
       
       
-      <a href="/posts/" aria-current="page">
+      <a href="/posts/" >
         <svg class="bookmark-icon" aria-hidden="true" focusable="false" viewBox="0 0 40 50">
           <use xlink:href="#bookmark"></use>
         </svg>
@@ -192,164 +192,133 @@
       <div class="main-and-footer">
         <div>
           
-<main id="main">
-  <h1>Posts</h1>
-  
-  <input
-    id="search"
-    type="text"
-    placeholder="Search by title..."
-    aria-label="Search by title"
-  />
-  
-  <ul class="patterns-list" id="list">
-    
-    <li>
-      <h2>
-        <a href="/posts/steppingon/">
-          <svg
-            class="bookmark"
-            aria-hidden="true"
-            viewBox="0 0 40 50"
-            focusable="false"
-          >
-            <use xlink:href="#bookmark"></use>
-          </svg>
-          SteppingOn
-        </a>
-      </h2>
-    </li>
-    
-    <li>
-      <h2>
-        <a href="/posts/puppet-locomotion/">
-          <svg
-            class="bookmark"
-            aria-hidden="true"
-            viewBox="0 0 40 50"
-            focusable="false"
-          >
-            <use xlink:href="#bookmark"></use>
-          </svg>
-          Puppet Locomotion
-        </a>
-      </h2>
-    </li>
-    
-    <li>
-      <h2>
-        <a href="/posts/locomotion-techniques/">
-          <svg
-            class="bookmark"
-            aria-hidden="true"
-            viewBox="0 0 40 50"
-            focusable="false"
-          >
-            <use xlink:href="#bookmark"></use>
-          </svg>
-          Locomotion Techniques
-        </a>
-      </h2>
-    </li>
-    
-    <li>
-      <h2>
-        <a href="/posts/lab3/">
-          <svg
-            class="bookmark"
-            aria-hidden="true"
-            viewBox="0 0 40 50"
-            focusable="false"
-          >
-            <use xlink:href="#bookmark"></use>
-          </svg>
-          VR roll-a-ball
-        </a>
-      </h2>
-    </li>
-    
-    <li>
-      <h2>
-        <a href="/posts/lab1/">
-          <svg
-            class="bookmark"
-            aria-hidden="true"
-            viewBox="0 0 40 50"
-            focusable="false"
-          >
-            <use xlink:href="#bookmark"></use>
-          </svg>
-          Unity roll-a-ball
-        </a>
-      </h2>
-    </li>
-    
-    <li>
-      <h2>
-        <a href="/posts/ultimate-display/">
-          <svg
-            class="bookmark"
-            aria-hidden="true"
-            viewBox="0 0 40 50"
-            focusable="false"
-          >
-            <use xlink:href="#bookmark"></use>
-          </svg>
-          The Ultimate Display
-        </a>
-      </h2>
-    </li>
-    
-    <li>
-      <h2>
-        <a href="/posts/hyper-reality/">
-          <svg
-            class="bookmark"
-            aria-hidden="true"
-            viewBox="0 0 40 50"
-            focusable="false"
-          >
-            <use xlink:href="#bookmark"></use>
-          </svg>
-          Hyper Reality
-        </a>
-      </h2>
-    </li>
-    
-    <li>
-      <h2>
-        <a href="/posts/unitysetup/">
-          <svg
-            class="bookmark"
-            aria-hidden="true"
-            viewBox="0 0 40 50"
-            focusable="false"
-          >
-            <use xlink:href="#bookmark"></use>
-          </svg>
-          Unity Setup
-        </a>
-      </h2>
-    </li>
-    
-    <li>
-      <h2>
-        <a href="/posts/blogsetup/">
-          <svg
-            class="bookmark"
-            aria-hidden="true"
-            viewBox="0 0 40 50"
-            focusable="false"
-          >
-            <use xlink:href="#bookmark"></use>
-          </svg>
-          Blog Setup
-        </a>
-      </h2>
-    </li>
-    
-  </ul>
-</main>
+  <main id="main">
+    <h1>SteppingOn</h1>
+    <h1 id="motivation">Motivation</h1>
+<p>The goal of this project was to explore to possibility of remotely controlling the actions of users
+in Virtual Reality without them noticing. I implemented a virtual environment (using Unity3D and the
+Oculus Quest) that can steer a user’s walking motion towards a specific location in space using subtle
+rotations of the visual field of view. For this, I adapted and reimplemented <a href="https://dl.acm.org/doi/10.1145/2858036.2858226"><em>HapticRetargeting</em></a>,
+a paper from Azmandian et al. published at ACM CHI 2016. This project was supervised
+by Jan Gugenheimer and Wen-Jie Tseng and is part of a larger research project that is focusing
+on showing the potential physical harms of VR.</p>
+<p>The application that I created is presented this way : there are three virtual boxes in front
+of three apple trees. The user has to step on those boxes to reach and grab apples. In the physical environment,
+there is a box on which the user can step. There is only one physical box, but we are using haptic retargeting to have an alignement between
+the physical box and the virtual box where the user wants to step on.
+<img class="special-img-class" src="/gif1.gif" width="600" /></p>
+<h3 id="vr-potential-physical-harms">VR potential physical harms</h3>
+<p>We can find a lot of videos of &ldquo;VR fails&rdquo; on the internet, showing people hurting themselves
+or others during a VR experience. Here is one of the hundreds of <a href="https://www.youtube.com/watch?v=4VXMFBoTJFU">VR fails compilation</a>.
+Most of the time, VR fails come from a mismatch between the physical and virtual world :
+what the user sees in VR doesn&rsquo;t correspond to his physical environment (if both worlds were
+identical, VR wouldn&rsquo;t have much interest&hellip;). We can categorize those videos into two types
+of mismatches.</p>
+<p>The first type of mismatch is when an object exists in the real environment but not in the virtual one.
+For example here, the player is hitting a wall because she cannot see it :</p>
+<p><img class="special-img-class" src="/gifFail1.gif" width="600" /></p>
+<p>The second type of mismatch is, on the contrary, when there is an object that you can see in
+the virtual environment but that doesn&rsquo;t physically exist. For example in this video, the player
+wants to lean on a table that doesn&rsquo;t physically exist, and falls :</p>
+<p><img class="special-img-class" src="/gifFail2.gif" width="600" /></p>
+<p>For this part of the project, we wanted to focuse on this second type of mismatch :
+How is it possible to induce physical harm from virtual objects that don&rsquo;t physically exist ?
+The idea was to create an app that could induce physical harm by manipulating you mental model
+of the real world, to try to understand the risks of VR illusions .</p>
+<p>We had several ideas of possible ways to induce physical harm from virtual objects.
+The first idea was using chairs. Imagine that you are in a virtual environment with several
+chairs, and that they are aligned with physical chairs, so you can sit on them. Now imagine
+that only one of those chairs is only virtual. Would you try to sit on it and fall ?
+The second idea was to try to simulate the fail of the VR ping-pong player, with a virtual
+table. Would you try to lean on the table as the player in the video ? We also thought
+of something similar with a wall (same idea of &ldquo;leaning&rdquo; on something, but with a vertical
+plane instead). We didn&rsquo;t keep those ideas because they could potentially reprensent too much
+danger for the user, as they could really fall as in the video.
+We had to think to something showing that the user could be hurt, without actually hurting him.</p>
+<p>The idea we had was inpired from something we all experienced at least once : when you are climbing
+stairs and you think that there is still another step, but you actually reach the stop. You lift your
+foot for nothing since there is no more steps, then you are surprised, and eventually you loose balance.
+That&rsquo;s the idea we wanted to produce, by making the user step on a virtual box.</p>
+<h1 id="implementation">Implementation</h1>
+<h3 id="alignement">Alignement</h3>
+<p>The first thing to do was to be able to align the real world with the virtual one. To do that, we specify
+two point in the virtual world, and we specify the distance between them. We just have to point
+those two points in the real world, and then a script will scale and rotate
+the real world so that the points are aligned.</p>
+<p><img class="special-img-class" src="/alignment.png" width="400" /></p>
+<p>For a moment we thought that foot tracking would be
+useful so that the user knows where his feet is, so I did something with a controller attached to a
+feet, but it turned out that it was not necessary because humans are good at estimating where their
+body is.</p>
+<p><img class="special-img-class" src="/alignment.gif" width="600" /></p>
+<h3 id="first-try">First try</h3>
+<p>For a first try simple to implement, we wanted to see if we could surprise the user with a virtual box.
+The idea is to have two virtual boxes aligned with two physical boxes that the user can
+step on (in blue in the diagram). The user has to step on those boxes one after the other, to reach objects. Then,
+there is a third box that is only virtual (in white). The user has to step on it too, and that’s where we expect an
+effect of surprise.</p>
+<p><img class="special-img-class" src="/schema1.png" width="300" />
+<img class="special-img-class" src="/firstTry.gif" width="600" /></p>
+<p>I tested this first try with two people. The results where really interesting,
+because they were focusing on reaching the sphere, and they forgot that the third step was only
+virtual. They didn’t loose balance, but they expressed surprise when they wanted to step on the
+virtual step. Something interesting too, is that I even got fooled myself with this. When I was focused
+on placing the spheres in the space, I wanted to step on the third step without paying attention that
+it was only virtual, even if I was consciously aware of the trick.</p>
+<p>Then, I added some environment with some apple trees to give the user a goal and a motivation to step on
+the boxes.</p>
+<p>In this first try, there is only two real boxes. We thought that if the user walked
+on more real steps before walking on a virtual step, the effect would be all the greater since the user would
+integrate even more the idea that a virtual step corresponds to a real step.
+That’s when we thought about haptic retargeting.</p>
+<h3 id="haptic-retargeting">Haptic Retargeting</h3>
+<p>The goal of haptic retargeting is to generate haptic feedback. You can find a demo video <a href="https://www.youtube.com/watch?v=v-5u0z4zA_8">here</a>.
+In the demo, they tell the user that there are three cubes and that he has to touch them, but there
+is actually only one physical cube. They manipulate the hand movements by rotating the virtual world,
+to make the user think there are three physical cubes.</p>
+<p>The idea was to use this technique with boxes instead of cubes. The scene is composed as following :
+There is a user, looking at three boxes in front of three apple trees. There is only one physical
+box, represented in blue in the diagram. The white boxes are only virtual. Behind the user there is
+a basket, which will be the center of rotation of the scene. The boxes are separated from an angle
+alpha.</p>
+<p><img class="special-img-class" src="/schema2.png" width="600" /></p>
+<p>Here is a paper prototype showing how we align the physical box with the virtual one.</p>
+<p><img class="special-img-class" src="/gifProto.gif" width="600" /></p>
+<p>At the beginning, the physical box is aligned with the middle virtual box. The user sees an apple on the middle tree.
+He goes to the middle box, which is aligned with a physical one, and he steps on it to grab the apple.
+Then, he turns around (180° rotation) to go to the basket and drop off his apple. Then, an apple
+appears on the left tree. The user has to turn around again to go back to the trees. That&rsquo;s when
+the trick happens. When the user has dropped his apple and turns his head to go back to the trees,
+we are going to rotate the scene. For a 1° rotation of the user&rsquo;s head, we rotate the scene of
+beta = alpha/180°. For example, if the angle between the boxes is 10°, we rotate the scene of 0.05° for a 1° rotation
+of the user. Therefore, when the user will have done a 180° rotation, the world will have rotated
+of alpha degrees, and the left virtual box will be aligned with the physical one. As the user point of view
+is already moving when he is turning around, this rotation of the scene won&rsquo;t be perceptible if beta is small
+enough.</p>
+<p>Actually, the user is never turning their head exactly 180° when turning around. So, by taking beta = alpha/180,
+after the user turned around, the virtual box wasn&rsquo;t fully aligned with the physical one (the scene didn&rsquo;t rotate of alpha°). To avoid this problem, we
+chose an arbitrary beta value of alpha/120, assuming the user always turns at least 120°. Once the virtual box is aligned
+with the physical one (once the scene has rotated of alpha°), we stop the rotation, in order to prevent the alignment from being exceeded if the user turns more than 120 °.</p>
+<p>In order to make the rotation of the scene is as less noticeable as possible, we have reduced the beta value
+by increasing the distance between the basket and the boxes, which allows to reduce the alpha angle.</p>
+<p>Then, I added some game mechanic so that the user is more committed to his desire to grab the apples and climb the boxes.
+The user must grab as many apples as possible, as fast as he can. The is a timer, and the apples are rotting if the user isn’t fast enough.
+The more faster he grabs the apple, the more points he gets.</p>
+<p>Here is a demo :</p>
+<p><img class="special-img-class" src="/gif1.gif" width="600" /></p>
+<p>First, he goes on the right step. Then, on the middle step, and the left step. The virtual box he has to step on is
+always aligned with the physical step, and we can repeat it as many times as we want.</p>
+<p>But at want point we want to fool the user, and make him walk on a virtual step. To do so, all we need to do is
+either to stop rotating the scene, or to rotate it in the opposite direction.</p>
+<p><img class="special-img-class" src="/gif2.gif" width="600" /></p>
+<h3 id="results">Results</h3>
+<p>We couldn’t test this app with external users because it was still a bit dangerous.
+We were worried that if the user misses a box, they would injure their ankle.
+We only did the experience ourselves. We didn’t loose balance, but we were surprised by
+the missing step. It’s interesting to see that even if we know what trick was going to
+happen, we couldn’t say when. We couldn’t anticipate it, and that’s what represent a danger here.</p>
+
+  </main>
 
           <footer role="contentinfo">
   <div>

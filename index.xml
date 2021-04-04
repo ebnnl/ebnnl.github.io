@@ -6,7 +6,16 @@
     <description>Recent content on Elise Bonnail Projects</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 04 Jan 2021 11:18:03 +0100</lastBuildDate><atom:link href="/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 29 Mar 2021 17:37:32 +0200</lastBuildDate><atom:link href="/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>SteppingOn</title>
+      <link>/posts/steppingon/</link>
+      <pubDate>Mon, 29 Mar 2021 17:37:32 +0200</pubDate>
+      
+      <guid>/posts/steppingon/</guid>
+      <description>Motivation The goal of this project was to explore to possibility of remotely controlling the actions of users in Virtual Reality without them noticing. I implemented a virtual environment (using Unity3D and the Oculus Quest) that can steer a user’s walking motion towards a specific location in space using subtle rotations of the visual field of view. For this, I adapted and reimplemented HapticRetargeting, a paper from Azmandian et al. published at ACM CHI 2016.</description>
+    </item>
+    
     <item>
       <title>Puppet Locomotion</title>
       <link>/posts/puppet-locomotion/</link>
